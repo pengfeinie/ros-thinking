@@ -6,7 +6,7 @@ Please find setting item, to choose about item, than update software center addr
 
 <img src="images/2022-05-15_140458.png" align="left" style='width:600px'/>
 
-
+</br>
 
 ## 2. installation
 
