@@ -20,6 +20,8 @@ Please find setting item, to choose about item, than update software center addr
 
 
 
+
+
 ## 2. installation
 
 There is more than one ROS distribution supported at a time. Some are older releases with long term support, making them more stable, while others are newer with shorter support life times, but with binaries for more recent platforms and more recent versions of the ROS packages that make them up.
@@ -38,6 +40,8 @@ ROS is not strictly tied to Ubuntu-based operating systems; however, Ubuntu is t
 <img src="images/2022-05-15_141933.png" align="left" style='width:600px'/>
 
 [ROS/Installation - ROS Wiki](http://wiki.ros.org/ROS/Installation)
+
+
 
 ### 2.1 ROS Noetic installation instructions
 
