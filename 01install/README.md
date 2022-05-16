@@ -4,9 +4,7 @@
 
 Please find setting item, to choose about item, than update software center address.
 
-<img src="images/2022-05-15_140458.png" align="left" style='width:600px'/>
-
-</br>
+<img src="images/2022-05-15_140458.png" align="left" style='width:800px'/>
 
 ## 2. installation
 
@@ -23,7 +21,7 @@ ROS is not strictly tied to Ubuntu-based operating systems; however, Ubuntu is t
 - Ubuntu 18.04.5 LTS (Bionic Beaver) --> ROS Melodic Morenia
 - Ubuntu 20.04.1 LTS (Focal Fossa) --> ROS Noetic Ninjemys
 
-<img src="images/2022-05-15_141933.png" align="left" style='width:600px'/>
+<img src="images/2022-05-15_141933.png" align="left" style='width:800px'/>
 
 [ROS/Installation - ROS Wiki](http://wiki.ros.org/ROS/Installation)
 
