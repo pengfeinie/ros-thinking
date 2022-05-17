@@ -83,13 +83,13 @@ sudo gedit /usr/lib/python3/dist-packages/rosdistro/__init__.py
 DEFAULT_INDEX_URL = 'file:///home/pfnie/Desktop/rosdistro-master/index-v4.yaml'
 ```
 
-step 6
+step6
 
 ```
 sudo rosdep init
 ```
 
-step 7
+step7
 
 ```
 rosdep update
