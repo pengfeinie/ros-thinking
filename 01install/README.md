@@ -55,3 +55,44 @@ yaml file:///home/pfnie/Desktop/rosdistro-master/rosdep/ruby.yaml
 gbpdistro file:///home/pfnie/Desktop/rosdistro-master/releases/fuerte.yaml fuerte
 ```
 
+step3 update /usr/lib/python3/dist-packages/rosdep2/sources_list.py  in line 72
+
+```
+sudo gedit /usr/lib/python3/dist-packages/rosdep2/sources_list.py
+```
+
+```
+DEFAULT_SOURCES_LIST_URL = 'file:///home/pfnie/Desktop/rosdistro-master/rosdep/sources.list.d/20-default.list'
+```
+
+step4 update /usr/lib/python3/dist-packages/rosdep2/rep3.py  in line 39
+
+```
+sudo gedit /usr/lib/python3/dist-packages/rosdep2/rep3.py
+```
+
+```
+REP3_TARGETS_URL = 'file:///home/pfnie/Desktop/rosdistro-master/releases/targets.yaml'
+```
+
+step5 update /usr/lib/python3/dist-packages/rosdistro/__init__.py  in line 68
+
+```
+sudo gedit /usr/lib/python3/dist-packages/rosdistro/__init__.py
+```
+
+```
+DEFAULT_INDEX_URL = 'file:///home/pfnie/Desktop/rosdistro-master/index-v4.yaml'
+```
+
+step 6
+
+```
+sudo rosdep init
+```
+
+step 7
+
+```
+rosdep update
+```
