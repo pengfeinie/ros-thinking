@@ -15,9 +15,7 @@ ROS is not strictly tied to Ubuntu-based operating systems; however, Ubuntu is t
 - Ubuntu 14.04.06 LTS (Trusty Tahr) --> ROS Indigo Igloo
 - Ubuntu 16.04.7 LTS (Xenial Xerus) --> ROS Kinetic Kame
 - Ubuntu 18.04.5 LTS (Bionic Beaver) --> ROS Melodic Morenia
-- Ubuntu 20.04.1 LTS (Focal Fossa) --> ROS Noetic Ninjemys
-
-<img src="images/2022-05-15_141933.png" style="width:600px" align="center" /> 
+- Ubuntu 20.04.1 LTS (Focal Fossa) --> ROS Noetic Ninjemys 
 
 [ROS/Installation - ROS Wiki](http://wiki.ros.org/ROS/Installation)
 
