@@ -4,23 +4,7 @@
 
 Please find setting item, to choose about item, than update software center address.
 
-<img src="images/2022-05-15_140458.png" style="width:600px" align="left" />  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<br>
+<img src="images/2022-05-15_140458.png" style="width:600px" align="center" />
 
 ## 2. installation
 
