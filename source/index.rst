@@ -11,6 +11,7 @@ Welcome to ros guide
    :caption: Contents:
 
    install/index
+   quick_start/index
    about
 
 
