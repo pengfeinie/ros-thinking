@@ -11,6 +11,7 @@ Welcome to ros guide
    :caption: Contents:
 
    2020/index
+   install/index
    about
 
 
