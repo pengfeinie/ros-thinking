@@ -8,7 +8,7 @@ cd simple01_workspace
 catkin_make
 ```
 
-![2022-06-09_125711](images/2022-06-09_125711.png)
+![](images/2022-06-09_125711.png)
 
 **Step2: create dependency package**
 

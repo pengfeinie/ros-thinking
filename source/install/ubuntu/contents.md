@@ -15,7 +15,7 @@ ROS is not strictly tied to Ubuntu-based operating systems; however, Ubuntu is t
 
 Please find setting item, to choose about item, than update software center address.
 
-![2022-05-15_140458](images/2022-05-15_140458.png)
+![](images/2022-05-15_140458.png)
 
 ## 2. ROS Noetic installation instruction
 
@@ -27,7 +27,7 @@ Step1 download into your local filesystem
 
 [ros/rosdistro: This repo maintains a lists of repositories for each ROS distribution (github.com)](https://github.com/ros/rosdistro)
 
-![2022-05-15_140458](images/2022-05-17_132226.png)
+![](images/2022-05-17_132226.png)
 
 **Step2 update /etc/ros/rosdep/sources.list.d/20-default.list**
 
