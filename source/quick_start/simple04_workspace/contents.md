@@ -1,4 +1,4 @@
-# hello world for publisher and subscriber
+# hello world custom message for publisher and subscriber 
 
 ## 1. background
 
