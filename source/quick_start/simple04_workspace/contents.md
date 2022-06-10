@@ -100,7 +100,6 @@ generate_messages(
 ```
 catkin_package(
 #  INCLUDE_DIRS include
-#  LIBRARIES demo02_talker_listener
    CATKIN_DEPENDS roscpp rospy std_msgs message_runtime
 #  DEPENDS system_lib
 )
@@ -163,7 +162,7 @@ int main(int argc, char *argv[])
     setlocale(LC_ALL,"");
     ros::init(argc,argv,"listener_person");
     ros::NodeHandle nh;
-    ros::Subscriber sub = nh.subscribe<hello_custom_msg_pub_sub::Person>("chatter_person",10,doPerson);
+    ros::Subscriber sub=nh.subscribe<hello_custom_msg_pub_sub::Person>("chatter_person",10,doPerson);
     ros::spin();    
     return 0;
 }
@@ -172,7 +171,7 @@ int main(int argc, char *argv[])
 
 ![](images/2022-06-10_141059.png)
 
-**Step8: config CMakelists.txt**
+**Step13: config CMakelists.txt**
 
 ```
 add_executable(hello_custom_msg_pub src/hello_custom_msg_pub.cpp.cpp)
@@ -185,13 +184,13 @@ target_link_libraries(hello_custom_msg_sub ${catkin_LIBRARIES})
 
 ![](images/2022-06-10_141540.png)
 
-**Step8:  compile**
+**Step14:  compile**
 
 ctrl + shift + B
 
 ![](images/2022-06-10_141749.png)
 
-**Step9:  start roscore** **& start hello_command**
+**Step15:  start roscore** **& start hello_command**
 
 ```
 roscore
