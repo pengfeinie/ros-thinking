@@ -99,13 +99,13 @@ target_link_libraries(hello ${catkin_LIBRARIES})
 
 ![](images/2022-06-10_103127.png)
 
-**Step7:  compile**
+**Step8:  compile**
 
 ctrl + shift + B
 
 ![](images/2022-06-10_103337.png)
 
-**Step8:  start roscore** **& start hello_command**
+**Step9:  start roscore** **& start hello_command**
 
 ```
 roscore
