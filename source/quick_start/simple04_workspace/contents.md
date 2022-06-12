@@ -207,4 +207,4 @@ rosrun hello_custom_msg_pub_sub hello_custom_msg_sub
 
 1. http://wiki.ros.org/action/fullsearch/catkin/commands/catkin_make
 2. https://docs.ros.org/en/rolling/Tutorials/Writing-A-Simple-Cpp-Publisher-And-Subscriber.html
-3. http://www.autolabor.com.cn/book/ROSTutorials/chapter1.html
+3. http://wiki.ros.org/es/ROS/Tutoriales/WritingPublisherSubscriber(c%2B%2B)
