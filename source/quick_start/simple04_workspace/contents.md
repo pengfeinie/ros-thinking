@@ -174,8 +174,8 @@ int main(int argc, char *argv[])
 **Step13: config CMakelists.txt**
 
 ```
-add_executable(hello_custom_msg_pub src/hello_custom_msg_pub.cpp.cpp)
-add_executable(hello_custom_msg_sub src/hello_custom_msg_sub.cpp.cpp)
+add_executable(hello_custom_msg_pub src/hello_custom_msg_pub.cpp)
+add_executable(hello_custom_msg_sub src/hello_custom_msg_sub.cpp)
 add_dependencies(hello_custom_msg_pub ${PROJECT_NAME}_generate_messages_cpp)
 add_dependencies(hello_custom_msg_sub ${PROJECT_NAME}_generate_messages_cpp)
 target_link_libraries(hello_custom_msg_pub ${catkin_LIBRARIES})
