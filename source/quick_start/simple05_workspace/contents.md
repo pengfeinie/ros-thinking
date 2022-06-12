@@ -223,6 +223,8 @@ rosrun hello_service_server_client hello_service_client 10 20
 
 ![](images/2022-06-12_152629.png)
 
+<video controls="controls" src="images/hello_service_server_client01.webm" width="700"></video>
+
 **Reference：**
 
 1. http://wiki.ros.org/action/fullsearch/catkin/commands/catkin_make
