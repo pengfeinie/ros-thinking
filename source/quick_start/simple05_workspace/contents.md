@@ -120,7 +120,8 @@ using ***ctrl + shift + B*** to select ***catkin_make:build***
 #include "ros/ros.h"
 #include "hello_service_server_client/AddInts.h"
 
-bool doReq(hello_service_server_client::AddInts::Request& req,hello_service_server_client::AddInts::Response& resp){
+bool doReq(hello_service_server_client::AddInts::Request& req,
+hello_service_server_client::AddInts::Response& resp){
     int num1 = req.a;
     int num2 = req.b;
 
