@@ -9,6 +9,7 @@ quick start
    simple03_workspace/contents
    simple04_workspace/contents
    simple05_workspace/contents
+   simple06_workspace/contents
 
 
 

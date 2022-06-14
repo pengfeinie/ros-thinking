@@ -215,7 +215,7 @@ ctrl + shift + B
 ```
 roscore
 
-cd simple04_workspace
+cd simple05_workspace
 source ./devel/setup.bash
 rosrun hello_service_server_client hello_service_server
 rosrun hello_service_server_client hello_service_client 10 20
