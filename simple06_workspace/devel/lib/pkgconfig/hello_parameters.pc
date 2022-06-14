@@ -1,0 +1,8 @@
+prefix=/home/pfnie/Downloads/simple06_workspace/devel
+
+Name: hello_parameters
+Description: Description of hello_parameters
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
