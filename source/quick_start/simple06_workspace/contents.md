@@ -1,4 +1,4 @@
-# hello world for **param**eters
+# hello world for parameters
 
 ## 1. background
 
