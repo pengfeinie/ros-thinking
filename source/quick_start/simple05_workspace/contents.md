@@ -224,7 +224,7 @@ rosrun hello_service_server_client hello_service_client 10 20
 ![](images/2022-06-12_152629.png)
 
 <video width="700" controls>
-	<source src="/_static/hello_service_server_client01.mp4" />
+	<source src="/en/latest/_static/hello_service_server_client01.mp4" />
 </video>
 
 **Reference：**
