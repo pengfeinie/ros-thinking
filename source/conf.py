@@ -73,4 +73,12 @@ html_show_sphinx = False
 #language = None
 
 html_theme_options = {
-    'display_version': False}
+    'display_version': False
+}
+
+html_context = {
+"display_github": False, # Add 'Edit on Github' link instead of 'View page source'
+"last_updated": True,
+"commit": False,
+}
+
