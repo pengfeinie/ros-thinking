@@ -71,3 +71,6 @@ html_show_sphinx = False
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
 #language = None
+
+html_theme_options = {
+    'display_version': False}
