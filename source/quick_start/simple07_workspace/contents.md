@@ -281,7 +281,7 @@ rosrun hello_action_server_client hello_action_client
 ![](images/2022-06-17_135640.png)
 
 <video width="700" controls>
-	<source src="/en/latest/_static/hello_action_server_client.wmv" />
+	<source src="/en/latest/_static/hello_action_server_client.mp4" />
 </video>
 
 **Reference：**
