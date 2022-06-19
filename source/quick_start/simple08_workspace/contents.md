@@ -2,7 +2,7 @@
 
 ## 1. background
 
-This tutorial session is devoted to learn the ROS synchronous request/response remote procedure calls with feedback and preemption.
+This tutorial introduces ROS graph concepts and discusses the use of [roscore](http://wiki.ros.org/roscore), [rosnode](http://wiki.ros.org/rosnode), and [rosrun](http://wiki.ros.org/rosrun) commandline tools.
 
 ## 2. Topic and Message 
 
@@ -138,7 +138,7 @@ ctrl + shift + B
 
 ![](images/2022-06-19_142940.png)
 
-**Step9:  start **
+**Step9:  start** 
 
 ```
 roscore
