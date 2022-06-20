@@ -378,9 +378,95 @@ rosrun hello_turtlesim hello_turtlesim_clone
 
 <br/>
 
+## 5. Changed turtlesim background using parameter
+
+### 5.1 Topic and Message 
+
+So now we can run the turtlesim_node in the turtlesim package.
+
+**Step1: Start rosrun :**
+
+```
+roscore
+```
+
+**Step2: Then, in a new terminal:**
+
+```
+rosrun turtlesim turtlesim_node
+```
+
+![](images/2022-06-19_135532.png)
+
+**Step3: list param**
+
+```
+rosparam list
+```
+
+![](images/2022-06-20_132148.png)
+
+### 4.2 Tasks
+
+**Step1: add hello_turtlesim_background.cpp in src folder**
+
+```
+#include "ros/ros.h"
+
+int main(int argc, char *argv[])
+{
+    ros::init(argc,argv,"hello_turtlesim_background");
+
+    ros::NodeHandle nh("turtlesim");
+    //ros::NodeHandle nh;
+
+    // ros::param::set("/turtlesim/background_r",0);
+    // ros::param::set("/turtlesim/background_g",0);
+    // ros::param::set("/turtlesim/background_b",0);
+
+    nh.setParam("background_r",0);
+    nh.setParam("background_g",0);
+    nh.setParam("background_b",0);
+    return 0;
+}
+```
+
+![](images/2022-06-20_132434.png)
+
+**Step2: config CMakelists.txt**
+
+```
+add_executable(hello_turtlesim_background src/hello_turtlesim_background.cpp)
+
+target_link_libraries(hello_turtlesim_background
+  ${catkin_LIBRARIES}
+)
+```
+
+**Step3: compile**
+
+ctrl + shift + B
+
+![](images/2022-06-20_133128.png)
+
+**Step4: run**
+
+```
+roscore
+
+cd simple08_workspace
+source ./devel/setup.bash
+rosrun hello_turtlesim hello_turtlesim_background
+
+rosrun turtlesim turtlesim_node
+```
+
+![](images/2022-06-20_133456.png)
+
 **Reference：**
 
 1. https://sir.upc.edu/projects/rostutorials/7-actions_tutorial/index.html?highlight=action
 1. http://wiki.ros.org/actionlib_tutorials/Tutorials
 1. http://wiki.ros.org/actionlib
 1. http://wiki.ros.org/ROS/Tutorials/UnderstandingNodes
+1. http://www.autolabor.com.cn/book/ROSTutorials/
