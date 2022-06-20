@@ -4,7 +4,9 @@
 
 This tutorial introduces ROS graph concepts and discusses the use of [roscore](http://wiki.ros.org/roscore), [rosnode](http://wiki.ros.org/rosnode), and [rosrun](http://wiki.ros.org/rosrun) commandline tools.
 
-## 2. Topic and Message 
+## 2. Control turtlesim using publisher
+
+### 2.1 Topic and Message 
 
 So now we can run the turtlesim_node in the turtlesim package.
 
@@ -39,7 +41,7 @@ rosmsg info geometry_msgs/Twist
 
 ![](images/2022-06-19_140250.png)
 
-## 3. Tasks
+### 2.2. Tasks
 
 **Step1: create workspace and initialization**
 
@@ -155,6 +157,108 @@ rosrun hello_turtlesim hello_turtlesim_controller
 <video width="700" controls>
 	<source src="/en/latest/_static/hello_turtlesim_controller.mp4" />
 </video>
+## 3. Display turtlesim track data using subscriber
+
+### 3.1 Topic and Message 
+
+So now we can run the turtlesim_node in the turtlesim package.
+
+**Step1: Start rosrun :**
+
+```
+roscore
+```
+
+**Step2: Then, in a new terminal:**
+
+```
+rosrun turtlesim turtlesim_node
+```
+
+![](images/2022-06-19_135532.png)
+
+**Step3: list topic**
+
+```
+rostopic list
+```
+
+![](images/2022-06-19_135940.png)
+
+**Step4: message**
+
+```
+rostopic type /turtle1/pose
+rosmsg info turtlesim/Pose
+```
+
+![](images/2022-06-19_150556.png)
+
+### 3.2 Tasks
+
+**Step1: add hello_turtlesim_display_track.cpp in src folder**
+
+```
+#include "ros/ros.h"
+#include "turtlesim/Pose.h"
+
+void doPose(const turtlesim::Pose::ConstPtr& p){
+    ROS_INFO("乌龟位姿信息:x=%.2f,y=%.2f,theta=%.2f,lv=%.2f,av=%.2f",
+        p->x,p->y,p->theta,p->linear_velocity,p->angular_velocity
+    );
+}
+
+int main(int argc, char *argv[])
+{
+    setlocale(LC_ALL,"");
+    // 2.初始化 ROS 节点
+    ros::init(argc,argv,"sub_pose");
+    // 3.创建 ROS 句柄
+    ros::NodeHandle nh;
+    // 4.创建订阅者对象
+    ros::Subscriber sub = nh.subscribe<turtlesim::Pose>("/turtle1/pose",1000,doPose);
+    // 5.回调函数处理订阅的数据
+    // 6.spin
+    ros::spin();
+    return 0;
+}
+```
+
+![](images/2022-06-19_151120.png)
+
+**Step2: config CMakelists.txt**
+
+```
+add_executable(hello_turtlesim_display_track src/hello_turtlesim_display_track.cpp)
+
+target_link_libraries(hello_turtlesim_display_track
+  ${catkin_LIBRARIES}
+)
+```
+
+**Step3:  compile**
+
+ctrl + shift + B
+
+![](images/2022-06-19_151243.png)
+
+**Step4:  compile**
+
+```
+roscore
+
+rosrun turtlesim turtlesim_node
+
+cd simple08_workspace
+source ./devel/setup.bash
+rosrun hello_turtlesim hello_turtlesim_controller
+
+cd simple08_workspace
+source ./devel/setup.bash
+rosrun hello_turtlesim hello_turtlesim_display_track
+```
+
+![](images/2022-06-20_095554.png)
 
 **Reference：**
 
