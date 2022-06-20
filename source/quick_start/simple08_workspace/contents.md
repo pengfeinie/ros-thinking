@@ -157,7 +157,7 @@ rosrun hello_turtlesim hello_turtlesim_controller
 <video width="700" controls>
 	<source src="/en/latest/_static/hello_turtlesim_controller.mp4" />
 </video>
-
+<br/>
 
 ## 3. Display turtlesim track data using subscriber
 
@@ -261,6 +261,12 @@ rosrun hello_turtlesim hello_turtlesim_display_track
 ```
 
 ![](images/2022-06-20_095554.png)
+
+<video width="700" controls>
+	<source src="/en/latest/_static/hello_turtlesim_display_track_sub.mp4" />
+</video>
+
+<br/>
 
 **Reference：**
 
