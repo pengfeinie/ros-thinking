@@ -1,0 +1,8 @@
+prefix=/home/pfnie/Downloads/simple08_workspace/devel
+
+Name: hello_turtlesim
+Description: Description of hello_turtlesim
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -244,7 +244,7 @@ ctrl + shift + B
 
 ![](images/2022-06-19_151243.png)
 
-**Step4:  compile**
+**Step4:  run**
 
 ```
 roscore
@@ -265,6 +265,116 @@ rosrun hello_turtlesim hello_turtlesim_display_track
 <video width="700" controls>
 	<source src="/en/latest/_static/hello_turtlesim_display_track_sub.mp4" />
 </video>
+
+<br/>
+
+<br/>
+
+## 4. Clone turtlesim using client-based request
+
+### 4.1 Topic and Message 
+
+So now we can run the turtlesim_node in the turtlesim package.
+
+**Step1: Start rosrun :**
+
+```
+roscore
+```
+
+**Step2: Then, in a new terminal:**
+
+```
+rosrun turtlesim turtlesim_node
+```
+
+![](images/2022-06-19_135532.png)
+
+**Step3: list service**
+
+```
+rosservice list
+rosservice type /spawn
+rossrv info turtlesim/Spawn
+```
+
+![](images/2022-06-20_125708.png)
+
+### 4.2 Tasks
+
+**Step1: add hello_turtlesim_clone.cpp in src folder**
+
+```
+#include "ros/ros.h"
+#include "turtlesim/Spawn.h"
+
+int main(int argc, char *argv[])
+{
+    setlocale(LC_ALL,"");
+    // 2.初始化 ros 节点
+    ros::init(argc,argv,"set_turtle");
+    // 3.创建 ros 句柄
+    ros::NodeHandle nh;
+    // 4.创建 service 客户端
+    ros::ServiceClient client = nh.serviceClient<turtlesim::Spawn>("/spawn");
+    // 5.等待服务启动
+    // client.waitForExistence();
+    ros::service::waitForService("/spawn");
+    // 6.发送请求
+    turtlesim::Spawn spawn;
+    spawn.request.x = 1.0;
+    spawn.request.y = 1.0;
+    spawn.request.theta = 1.57;
+    spawn.request.name = "my_turtle";
+    bool flag = client.call(spawn);
+    // 7.处理响应结果
+    if (flag)
+    {
+        ROS_INFO("新的乌龟生成,名字:%s",spawn.response.name.c_str());
+    } else {
+        ROS_INFO("乌龟生成失败！！！");
+    }
+    return 0;
+}
+```
+
+![](images/2022-06-20_125931.png)
+
+**Step2: config CMakelists.txt**
+
+```
+add_executable(hello_turtlesim_clone src/hello_turtlesim_clone.cpp)
+
+target_link_libraries(hello_turtlesim_clone
+  ${catkin_LIBRARIES}
+)
+```
+
+**Step3: compile**
+
+ctrl + shift + B
+
+![](images/2022-06-20_130309.png)
+
+**Step4: run**
+
+```
+roscore
+
+rosrun turtlesim turtlesim_node
+
+cd simple08_workspace
+source ./devel/setup.bash
+rosrun hello_turtlesim hello_turtlesim_clone
+```
+
+![](images/2022-06-20_130558.png)
+
+<video width="700" controls>
+	<source src="/en/latest/_static/hello_turtlesim_clone.mp4" />
+</video>
+
+
 
 <br/>
 
