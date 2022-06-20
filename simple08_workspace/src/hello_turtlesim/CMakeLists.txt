@@ -140,6 +140,8 @@ include_directories(
 add_executable(hello_turtlesim_controller src/hello_turtlesim_controller.cpp)
 add_executable(hello_turtlesim_display_track src/hello_turtlesim_display_track.cpp)
 add_executable(hello_turtlesim_clone src/hello_turtlesim_clone.cpp)
+add_executable(hello_turtlesim_background src/hello_turtlesim_background.cpp)
+
 
 
 
@@ -171,6 +173,9 @@ target_link_libraries(hello_turtlesim_clone
   ${catkin_LIBRARIES}
 )
 
+target_link_libraries(hello_turtlesim_background
+  ${catkin_LIBRARIES}
+)
 
 #############
 ## Install ##
