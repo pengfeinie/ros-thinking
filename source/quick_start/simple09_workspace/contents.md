@@ -1,10 +1,12 @@
 # hello world for custom header file 
 
-## 1. background
+## 1. Hello world 1
+
+### 1.1 Background
 
 Design the header file, the executable itself as the source file.
 
-## 2. Tasks
+### 1.2 Tasks
 
 **Step1: create workspace and initialization**
 
@@ -120,13 +122,13 @@ target_link_libraries(hello
 )
 ```
 
-**Step8:  compile**
+**Step10:  compile**
 
 ctrl + shift + B
 
 ![](images/2022-06-22_141154.png)
 
-**Step9:  start** 
+**Step11:  start** 
 
 ```
 cd simple09_workspace
@@ -135,6 +137,109 @@ rosrun hello_custom_header hello
 ```
 
 ![](images/2022-06-22_142004.png)
+
+## 2. Hello world 2
+
+### 2.1 Background
+
+Design the header file with the source file and include the header file in the executable file.
+
+### 2.2 Tasks
+
+**Step1: create ros package**
+
+Selected src right click ---> create catkin package
+
+![](images/2022-06-21_134154.png)
+
+please type your package and dependencies.
+
+```
+hello_custom_header_2
+roscpp rospy std_msgs
+```
+
+![](images/2022-06-24_094634.png)
+
+**Step2: add hello2.h in include/hello_custom_header_2 folder**
+
+```
+namespace hello_ns{
+
+class HelloPub {
+
+public:
+    void run();
+};
+
+}
+```
+
+![](images/2022-06-24_094919.png)
+
+**Step3: add hello2.cpp in src folder**
+
+```
+#include "hello_custom_header_2/hello2.h"
+#include "ros/ros.h"
+
+namespace hello_ns{
+
+void HelloPub::run(){
+    ROS_INFO("hello,head and src ...");
+}
+
+}
+```
+
+![](images/2022-06-24_095355.png)
+
+**Step4: add use_header_main.cpp in src folder**
+
+```
+#include "ros/ros.h"
+#include "hello_custom_header_2/hello2.h"
+
+int main(int argc, char *argv[])
+{
+    ros::init(argc,argv,"hahah");
+    hello_ns::HelloPub my;
+    my.run();
+    return 0;
+}
+```
+
+![](images/2022-06-24_095919.png)
+
+**Step5: config CMakelists.txt**
+
+```
+include_directories(
+include
+  ${catkin_INCLUDE_DIRS}
+)
+
+add_library(head
+  include/hello_custom_header_2/hello2.h
+  src/hello2.cpp
+)
+
+add_dependencies(head ${PROJECT_NAME} ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+
+target_link_libraries(head
+  ${catkin_LIBRARIES}
+)
+
+add_executable(use_head src/use_head.cpp)
+
+add_dependencies(use_head ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+
+target_link_libraries(use_head
+  ${catkin_LIBRARIES}
+)
+```
+
+
 
 **Reference：**
 
