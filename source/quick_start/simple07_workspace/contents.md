@@ -286,6 +286,6 @@ rosrun hello_action_server_client hello_action_client
 
 **Reference：**
 
-1. https://sir.upc.edu/projects/rostutorials/7-actions_tutorial/index.html?highlight=action
-1. http://wiki.ros.org/actionlib_tutorials/Tutorials
-1. http://wiki.ros.org/actionlib
+1. [https://sir.upc.edu/projects/rostutorials/7-actions_tutorial/index.html?highlight=action](https://sir.upc.edu/projects/rostutorials/7-actions_tutorial/index.html?highlight=action)
+1. [http://wiki.ros.org/actionlib_tutorials/Tutorials](http://wiki.ros.org/actionlib_tutorials/Tutorials)
+1. [http://wiki.ros.org/actionlib](http://wiki.ros.org/actionlib)

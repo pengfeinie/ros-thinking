@@ -4,7 +4,6 @@ quick start
 .. toctree::
    :maxdepth: 2
 
-   pre_setup/contents
    simple01_workspace/contents
    simple02_workspace/contents
    simple03_workspace/contents

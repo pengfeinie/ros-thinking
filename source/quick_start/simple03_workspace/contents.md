@@ -143,6 +143,6 @@ rosrun hello_pub_sub hello_sub
 
 **Reference：**
 
-1. http://wiki.ros.org/action/fullsearch/catkin/commands/catkin_make
-2. https://docs.ros.org/en/rolling/Tutorials/Writing-A-Simple-Cpp-Publisher-And-Subscriber.html
-3. http://www.autolabor.com.cn/book/ROSTutorials/chapter1.html
+1. [http://wiki.ros.org/action/fullsearch/catkin/commands/catkin_make](http://wiki.ros.org/action/fullsearch/catkin/commands/catkin_make)
+2. [https://docs.ros.org/en/rolling/Tutorials/Writing-A-Simple-Cpp-Publisher-And-Subscriber.html](https://docs.ros.org/en/rolling/Tutorials/Writing-A-Simple-Cpp-Publisher-And-Subscriber.html)
+3. [http://www.autolabor.com.cn/book/ROSTutorials/chapter1.html](http://www.autolabor.com.cn/book/ROSTutorials/chapter1.html)
