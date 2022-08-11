@@ -1,0 +1,8 @@
+prefix=/home/pfnie/Downloads/simple09_workspace/devel
+
+Name: hello_custom_header_2
+Description: Description of hello_custom_header_2
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
