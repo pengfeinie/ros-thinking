@@ -1,0 +1,8 @@
+prefix=/home/pfnie/Downloads/simple07_workspace/devel
+
+Name: hello_action_server_client
+Description: Description of hello_action_server_client
+Version: 0.0.0
+Cflags: -I/home/pfnie/Downloads/simple07_workspace/devel/include
+Libs: -L${prefix}/lib 
+Requires: actionlib actionlib_msgs roscpp rospy std_msgs
