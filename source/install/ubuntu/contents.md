@@ -19,10 +19,6 @@ ROS is not strictly tied to Ubuntu-based operating systems; however, Ubuntu is t
 
 [ROS/Installation - ROS Wiki](http://wiki.ros.org/ROS/Installation)
 
-<video width="700" controls>
-    <source src="//player.bilibili.com/player.html?aid=352723718&bvid=BV1PX4y1X7v7&cid=1028876069&page=1" />
-</video>
-
 <iframe src="//player.bilibili.com/player.html?aid=901372316&bvid=BV14N4y1A7oc&cid=854871611&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 <iframe src="//player.bilibili.com/player.html?aid=901372316&bvid=BV14N4y1A7oc&cid=854871611&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
