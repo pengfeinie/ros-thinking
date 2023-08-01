@@ -18,7 +18,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'ros-thinking'
-copyright = '2022, pfnie'
+copyright = '2023, pfnie'
 author = 'pfnie'
 
 # The full version, including alpha/beta/rc tags
@@ -59,9 +59,9 @@ html_static_path = ['_static']
 
 # If true, links to the reST sources are added to the pages.
 #
-#html_show_sourcelink = False
+html_show_sourcelink = False
 
 # If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
 #
-html_show_sphinx = False
+html_show_sphinx = true
 
