@@ -1,4 +1,4 @@
-# hello world for vscode
+# 02 hello world for vscode
 
 ## 1. install terminator
 

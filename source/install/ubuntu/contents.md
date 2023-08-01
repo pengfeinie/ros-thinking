@@ -1,4 +1,4 @@
-# install on ubuntu
+# 01 install on ubuntu
 
 ## 1. share folders between your Ubuntu and your host
 
