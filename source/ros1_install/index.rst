@@ -1,4 +1,4 @@
-install
+ros1_install
 =================================
 
 .. toctree::

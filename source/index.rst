@@ -7,11 +7,11 @@ Welcome to ros guide
 ========================================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Contents:
 
-   install/index
-   quick_start/index
+   ros1_install/index
+   ros1_quick_start/index
    about
 
 

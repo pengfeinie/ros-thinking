@@ -1,4 +1,4 @@
-quick start
+ros1_quick_start
 =================================
 
 .. toctree::
